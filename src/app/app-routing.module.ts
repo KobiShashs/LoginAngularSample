@@ -1,3 +1,5 @@
+import { StamtagComponent } from './components/stamtag/stamtag.component';
+import { StamComponent } from './components/stam/stam.component';
 import { CompanyGuardService } from './services/company-guard.service';
 import { CustomerGuardService } from './services/customer-guard.service';
 import { AdminGuardService } from './services/admin-guard.service';
@@ -12,9 +14,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'admin', component: AdminComponent, canActivate: [AdminGuardService] },
-  { path: 'customer', component: CustomerComponent, canActivate: [CustomerGuardService]},
+  { path: 'customer', component: CustomerComponent, canActivate: [CustomerGuardService] },
   { path: 'company', component: CompanyComponent, canActivate: [CompanyGuardService] },
   { path: 'login', component: LoginComponent },
+  { path: 'stam', component: StamComponent },
+  { path: 'stam/:id', component: StamtagComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: HomeComponent, pathMatch: 'full' }
 ];

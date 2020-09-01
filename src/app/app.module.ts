@@ -9,6 +9,8 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StamComponent } from './components/stam/stam.component';
+import { StamtagComponent } from './components/stamtag/stamtag.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     AdminComponent,
     CompanyComponent,
     CustomerComponent,
-    LoginComponent
+    LoginComponent,
+    StamComponent,
+    StamtagComponent
   ],
   imports: [
     BrowserModule,
